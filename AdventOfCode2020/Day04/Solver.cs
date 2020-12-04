@@ -18,7 +18,31 @@ namespace AdventOfCode2020.Day04
 
         public string GetFirstSolution()
         {
-            return string.Empty;
+            int validPassports = 0;
+            Passport actualPassport = new Passport();
+            foreach (var line in input)
+            {
+                if (string.IsNullOrWhiteSpace(line))
+                {
+                    if (actualPassport.IsValid)
+                    {
+                        validPassports++;
+                    }
+                    actualPassport = new Passport();
+                }
+                else
+                {
+                    foreach (var field in line.Split())
+                    {
+                        actualPassport.AddField(field);
+                    }
+                }
+            }
+            if (actualPassport.IsValid)
+            {
+                validPassports++;
+            }
+            return validPassports.ToString();
         }
 
         public string GetSecondSolution()
