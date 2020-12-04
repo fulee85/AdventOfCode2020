@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AdventOfCode2020.Day04
 {
     public class Passport
     {
-        private readonly Dictionary<string, string> data = new Dictionary<string, string>();
-        private readonly List<string> requiredFields = new List<string> { 
+        protected readonly Dictionary<string, string> data = new Dictionary<string, string>();
+        private readonly List<string> requiredFields = new List<string> {
             "byr",
             "iyr",
             "eyr",
@@ -31,6 +29,6 @@ namespace AdventOfCode2020.Day04
             data.TryAdd(fieldName, fieldValue);
         }
 
-        public bool IsValid => requiredFields.All(rqf => data.ContainsKey(rqf));
+        public virtual bool IsValid() => requiredFields.All(rqf => data.ContainsKey(rqf));
     }
 }

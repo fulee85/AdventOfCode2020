@@ -18,17 +18,27 @@ namespace AdventOfCode2020.Day04
 
         public string GetFirstSolution()
         {
+            return GetValidPassportsCount(() => new Passport()).ToString();
+        }
+
+        public string GetSecondSolution()
+        {
+            return GetValidPassportsCount(() => new StrictPassport()).ToString();
+        }
+
+        private int GetValidPassportsCount(Func<Passport> createPassport)
+        {
             int validPassports = 0;
-            Passport actualPassport = new Passport();
+            Passport actualPassport = createPassport();
             foreach (var line in input)
             {
                 if (string.IsNullOrWhiteSpace(line))
                 {
-                    if (actualPassport.IsValid)
+                    if (actualPassport.IsValid())
                     {
                         validPassports++;
                     }
-                    actualPassport = new Passport();
+                    actualPassport = createPassport();
                 }
                 else
                 {
@@ -38,16 +48,11 @@ namespace AdventOfCode2020.Day04
                     }
                 }
             }
-            if (actualPassport.IsValid)
+            if (actualPassport.IsValid())
             {
                 validPassports++;
             }
-            return validPassports.ToString();
-        }
-
-        public string GetSecondSolution()
-        {
-            return string.Empty;
+            return validPassports;
         }
     }
 }
