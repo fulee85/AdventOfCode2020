@@ -29,5 +29,27 @@ a
 b".Split(Environment.NewLine));
             solver.GetFirstSolution().Should().Be("11");
         }
+
+        [Fact]
+        public void SolverTest2()
+        {
+            ISolver solver = new Solver(
+@"abc
+
+a
+b
+c
+
+ab
+ac
+
+a
+a
+a
+a
+
+b".Split(Environment.NewLine));
+            solver.GetSecondSolution().Should().Be("6");
+        }
     }
 }

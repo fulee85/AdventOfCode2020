@@ -16,13 +16,23 @@ namespace AdventOfCode2020.Day06
 
         public string GetFirstSolution()
         {
+            return GetAnswerCount(pg =>pg.AnyAnswerCount);
+        }
+
+        public string GetSecondSolution()
+        {
+            return GetAnswerCount(pg => pg.AllAnswerCount);
+        }
+
+        private string GetAnswerCount(Func<PassangerGroup,int> countFunc)
+        {
             PassangerGroup passangerGroup = new PassangerGroup();
             int answerCount = 0;
             for (int i = 0; i < input.Count; i++)
             {
                 if (string.IsNullOrWhiteSpace(input[i]))
                 {
-                    answerCount += passangerGroup.AnswerCount;
+                    answerCount += countFunc(passangerGroup);
                     passangerGroup = new PassangerGroup();
                 }
                 else
@@ -30,13 +40,9 @@ namespace AdventOfCode2020.Day06
                     passangerGroup.AddAnswer(input[i]);
                 }
             }
-            answerCount += passangerGroup.AnswerCount;
+            answerCount += countFunc(passangerGroup);
             return answerCount.ToString();
         }
 
-        public string GetSecondSolution()
-        {
-            return "";
-        }
     }
 }
