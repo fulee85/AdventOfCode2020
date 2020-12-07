@@ -15,6 +15,7 @@ namespace AdventOfCode2020
                 4 => new Day04.Solver(new Input<string>("04", s => s)),
                 5 => new Day05.Solver(new Input<Day05.BoardingPass>("05", s => new Day05.BoardingPass(s))),
                 6 => new Day06.Solver(new Input<string>("06", s => s)),
+                7 => new Day07.Solver(new Input<Day07.BagRule>("07", s => new Day07.BagRule(s))),
                 _ => throw new Exception()
             };
         }
