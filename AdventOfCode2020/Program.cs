@@ -6,9 +6,9 @@ namespace AdventOfCode2020
     {
         static void Main(string[] args)
         {
-            var solution = SolverFactory.GetSolver(8);
-            Console.WriteLine("First solution: " + solution.GetFirstSolution());
-            Console.WriteLine("Second solution: " + solution.GetSecondSolution());
+            var solver = SolverFactory.GetSolver(9);
+            Console.WriteLine("First solution: " + solver.GetFirstSolution());
+            Console.WriteLine("Second solution: " + solver.GetSecondSolution());
         }
     }
 }
