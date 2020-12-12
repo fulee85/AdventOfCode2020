@@ -1,7 +1,6 @@
 ﻿namespace AdventOfCode2020.Day11
 {
     using AdventOfCode2020.Common;
-    using System;
     using System.Collections.Generic;
     using System.Linq;
 
