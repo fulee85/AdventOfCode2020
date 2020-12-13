@@ -19,6 +19,7 @@ namespace AdventOfCode2020
             10 => new Day10.Solver(new Input<int>("10", int.Parse)),
             11 => new Day11.Solver(new Input<string>("11", s => s)),
             12 => new Day12.Solver(new Input<string>("12", s => s)),
+            13 => new Day13.Solver(new Input<string>("13", s => s)),
             _ => throw new Exception()
         };
     }
