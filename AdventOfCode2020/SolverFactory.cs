@@ -1,5 +1,6 @@
 ﻿using AdventOfCode2020.Common;
 using System;
+using System.Linq;
 
 namespace AdventOfCode2020
 {
@@ -21,6 +22,7 @@ namespace AdventOfCode2020
             12 => new Day12.Solver(new Input<string>("12", s => s)),
             13 => new Day13.Solver(new Input<string>("13", s => s)),
             14 => new Day14.Solver(new Input<string>("14", s => s)),
+            15 => new Day15.Solver(new Input<string>("15", s => s).First()),
             _ => throw new Exception()
         };
     }

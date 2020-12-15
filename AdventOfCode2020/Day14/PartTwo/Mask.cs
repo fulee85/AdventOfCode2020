@@ -44,9 +44,9 @@
 
             var baseValue = Convert.ToInt64(maskedValue.ToString(), 2);
 
-            foreach (var floatingBitValue in floatingValueVariations)
+            foreach (var floatingBitValueVariation in floatingValueVariations)
             {
-                yield return baseValue + floatingBitValue;
+                yield return baseValue + floatingBitValueVariation;
             }
         }
     }
