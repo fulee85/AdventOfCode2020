@@ -27,7 +27,7 @@
 
         protected virtual ISpaceCube CreateSpaceCube(int x, int y, int z, int w)
         {
-            return new SpaceCube2D(x,y,z);
+            return new SpaceCube3D(x,y,z);
         }
 
         public void SetActivePart(int x, int y)
