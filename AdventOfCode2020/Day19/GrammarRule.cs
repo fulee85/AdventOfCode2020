@@ -5,21 +5,9 @@
 
     public class GrammarRule
     {
-        public GrammarRule(string from, string to)
+        public GrammarRule(string from)
         {
             From = from;
-            if (to.Contains("a"))
-            { 
-                Terminal = "a";
-            }
-            else if (to.Contains("b"))
-            {
-                Terminal = "b";
-            }
-            else
-            {
-                To = new List<string>(to.Split(' ', StringSplitOptions.RemoveEmptyEntries));
-            }
         }
 
         public string From { get; }
