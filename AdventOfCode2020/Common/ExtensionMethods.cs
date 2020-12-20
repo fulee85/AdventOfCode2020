@@ -18,5 +18,7 @@ namespace AdventOfCode2020.Common
             }
             return enumerable;
         }
+
+        public static bool IsNotEmpty<T>(this List<T> list) => list.Count > 0;
     }
 }
