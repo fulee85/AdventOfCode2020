@@ -7,7 +7,7 @@
 
     public class Solver : ISolver
     {
-        private List<Tile> tiles = new List<Tile>();
+        private readonly List<Tile> tiles = new List<Tile>();
         public Solver(IEnumerable<string> input)
         {
             var tileInput = new List<string>(); 
@@ -31,27 +31,40 @@
 
         public string GetFirstSolution()
         {
-            var tileDict = tiles.ToDictionary(t => t.Id, t => new List<Tile>());
-            for (int i = 0; i < tiles.Count - 1; i++)
-            {
-                for (int j = i + 1; j < tiles.Count; j++)
-                {
-                    var matchCount = Tile.GetSideMatchCount(tiles[i], tiles[j]);
-                    if (matchCount > 0)
-                    {
-                        tileDict[tiles[i].Id].Add(tiles[j]);
-                        tileDict[tiles[j].Id].Add(tiles[i]);
-                    }
-                }
-            }
-            var y = tileDict.Where(t => t.Value.Count == 2).Aggregate(1M, (a,kv) => a*kv.Key);
-            return y.ToString();
+            InitializeTileConnections();
+            return GetCornerTiles().Aggregate(1M, (a, t) => a * t.Id).ToString();
         }
 
         public string GetSecondSolution()
         {
-            return string.Empty;
+            InitializeTileConnections();
+            var cornerTiles = GetCornerTiles();
+            var pictureBuilder = new PictureBuilder(cornerTiles, tiles);
+            var picture = pictureBuilder.Build();
+            picture.AssembleTiles();
+            // picture.WriteOutPicture();
+            var monsterFinder = new MonsterFinder(picture);
+            monsterFinder.MarkMonstersOnPicture();
+            // picture.WriteOutPicture();
+            return picture.CountNotMonsters().ToString();
         }
 
+        private IEnumerable<Tile> GetCornerTiles() => tiles.Where(t => t.TileMatchCount == 2);
+
+        private bool isInitialized = false;
+        private void InitializeTileConnections()
+        {
+            if (isInitialized) return;
+            isInitialized = true;
+
+            for (int i = 0; i < tiles.Count - 1; i++)
+            {
+                for (int j = i + 1; j < tiles.Count; j++)
+                {
+                    Tile.CheckTileMatch(tiles[i], tiles[j]);
+                }
+            }
+
+        }
     }
 }
