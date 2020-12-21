@@ -9,7 +9,7 @@
     public class Solver : ISolver
     {
         private Dictionary<string, HashSet<string>> allergenIngredientsDict = new Dictionary<string, HashSet<string>>();
-        private List<string> ingredients = new List<string>();
+        private List<string> allIngredients = new List<string>();
         public Solver(IEnumerable<Food> input)
         {
             foreach (var food in input)
@@ -25,16 +25,16 @@
                         allergenIngredientsDict[allergen] = new HashSet<string>(food.Ingredients);
                     }
                 }
-                ingredients.AddRange(food.Ingredients);
+                allIngredients.AddRange(food.Ingredients);
             }
         }
 
         public string GetPartOneSolution()
         {
-            var possibleIngredientsWithAllergen = allergenIngredientsDict
+            var ingredientsWithAllergen = allergenIngredientsDict
                 .Values.Aggregate(new HashSet<string>(), (s, h) => { s.UnionWith(h); return s; });
-            ingredients.RemoveAll(s => possibleIngredientsWithAllergen.Contains(s));
-            return ingredients.Count.ToString();
+            allIngredients.RemoveAll(s => ingredientsWithAllergen.Contains(s));
+            return allIngredients.Count.ToString();
         }
 
         public string GetPartTwoSolution()
