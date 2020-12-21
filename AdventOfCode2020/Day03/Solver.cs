@@ -15,7 +15,7 @@ namespace AdventOfCode2020.Day03
 
         const char tree = '#';
 
-        public string GetFirstSolution() => CountEncounteredTrees(3, 1).ToString();
+        public string GetPartOneSolution() => CountEncounteredTrees(3, 1).ToString();
 
         private static readonly List<(int right, int down)> steps = new List<(int right, int down)>
         {
@@ -26,7 +26,7 @@ namespace AdventOfCode2020.Day03
             (1,2)
         };
 
-        public string GetSecondSolution() => steps
+        public string GetPartTwoSolution() => steps
             .Select(t => CountEncounteredTrees(t.right, t.down))
             .Aggregate(1M, (a, b) => a * b).ToString();
 

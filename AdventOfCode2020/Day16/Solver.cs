@@ -45,7 +45,7 @@
             }
         }
 
-        public string GetFirstSolution()
+        public string GetPartOneSolution()
         {
             Initialize();
             int ticketScanningErrorRate = GetTicketScanningErrorRate();
@@ -84,7 +84,7 @@
             return ticketScanningErrorRate;
         }
 
-        public string GetSecondSolution()
+        public string GetPartTwoSolution()
         {
             Initialize();
             if (validNeatByTickets is null)

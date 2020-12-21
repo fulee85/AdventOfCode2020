@@ -1,4 +1,5 @@
 ﻿using AdventOfCode2020.Common;
+using AdventOfCode2020.Day21;
 using System;
 using System.Linq;
 
@@ -28,6 +29,7 @@ namespace AdventOfCode2020
             18 => new Day18.Solver(new Input<string>("18", s => s)),
             19 => new Day19.Solver(new Input<string>("19", s => s)),
             20 => new Day20.Solver(new Input<string>("20", s => s)),
+            21 => new Day21.Solver(new Input<Food>("21", s => new Food(s))),
             _ => throw new Exception()
         };
     }

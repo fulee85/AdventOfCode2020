@@ -29,13 +29,13 @@
             }
         }
 
-        public string GetFirstSolution()
+        public string GetPartOneSolution()
         {
             InitializeTileConnections();
             return GetCornerTiles().Aggregate(1M, (a, t) => a * t.Id).ToString();
         }
 
-        public string GetSecondSolution()
+        public string GetPartTwoSolution()
         {
             InitializeTileConnections();
             var cornerTiles = GetCornerTiles();

@@ -28,7 +28,7 @@
             }
         }
 
-        public string GetFirstSolution()
+        public string GetPartOneSolution()
         {
             Init();
             List<GridElement> chairs = new List<GridElement>();
@@ -78,7 +78,7 @@
             }
         }
 
-        public string GetSecondSolution()
+        public string GetPartTwoSolution()
         {
             Init();
             List<GridElement> chairs = new List<GridElement>();

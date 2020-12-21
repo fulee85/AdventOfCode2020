@@ -25,7 +25,7 @@ hgt:179cm
 
 hcl:#cfa07d eyr:2025 pid:166559648
 iyr:2011 ecl:brn hgt:59in".Split(Environment.NewLine));
-            solver.GetFirstSolution().Should().Be("2");
+            solver.GetPartOneSolution().Should().Be("2");
         }
 
         [Fact]
@@ -45,7 +45,7 @@ ecl:brn hgt:182cm pid:021572410 eyr:2020 byr:1992 cid:277
 hgt:59cm ecl:zzz
 eyr:2038 hcl:74454a iyr:2023
 pid:3556412378 byr:2007".Split(Environment.NewLine));
-            solver.GetSecondSolution().Should().Be("0");
+            solver.GetPartTwoSolution().Should().Be("0");
         }
 
         [Fact]
@@ -64,7 +64,7 @@ pid:545766238 ecl:hzl
 eyr:2022
 
 iyr:2010 hgt:158cm hcl:#b6652a ecl:blu byr:1944 eyr:2021 pid:093154719".Split(Environment.NewLine));
-            solver.GetSecondSolution().Should().Be("4");
+            solver.GetPartTwoSolution().Should().Be("4");
         }
     }
 }

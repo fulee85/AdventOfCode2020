@@ -14,12 +14,12 @@
 
         private readonly int[] startingNumbers;
 
-        public string GetFirstSolution()
+        public string GetPartOneSolution()
         {
             return Calculate(2020);
         }
 
-        public string GetSecondSolution()
+        public string GetPartTwoSolution()
         {
             return Calculate(30000000);
         }

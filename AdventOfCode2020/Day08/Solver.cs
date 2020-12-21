@@ -15,9 +15,9 @@ namespace AdventOfCode2020.Day08
             computer = new Computer();
         }
 
-        public string GetFirstSolution() => computer.Run(instructions).accumlator.ToString();
+        public string GetPartOneSolution() => computer.Run(instructions).accumlator.ToString();
 
-        public string GetSecondSolution()
+        public string GetPartTwoSolution()
         {
             for (int i = 0; i < instructions.Count; i++)
             {

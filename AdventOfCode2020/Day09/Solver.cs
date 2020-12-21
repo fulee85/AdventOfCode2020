@@ -29,7 +29,7 @@ namespace AdventOfCode2020.Day09
             }
         }
 
-        public string GetFirstSolution()
+        public string GetPartOneSolution()
         {
             int i;
             for (i = preamble; i < inputs.Length && HasSumOfTwoIn(inputs[i], inputs[(i - preamble)..i]); i++)
@@ -51,11 +51,11 @@ namespace AdventOfCode2020.Day09
             return false;
         }
 
-        public string GetSecondSolution()
+        public string GetPartTwoSolution()
         {
             if (firstSolutionPlace == -1)
             {
-                GetFirstSolution();
+                GetPartOneSolution();
             }
             long firstSolutionValue = inputs[firstSolutionPlace];
             bool contiguousRangeHasFound = false;

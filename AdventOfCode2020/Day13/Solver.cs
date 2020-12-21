@@ -15,7 +15,7 @@
         }
 
         #region partOne
-        public string GetFirstSolution()
+        public string GetPartOneSolution()
         {
             var timestampNow = int.Parse(input[0]);
             var buses = GetBuses(input[1]);
@@ -48,7 +48,7 @@
         /// https://en.wikipedia.org/wiki/Chinese_remainder_theorem
         /// </summary>
         /// <returns></returns>
-        public string GetSecondSolution()
+        public string GetPartTwoSolution()
         {
             var busIdList = input[1].Split(',');
             List<Bus> buses = new List<Bus>();

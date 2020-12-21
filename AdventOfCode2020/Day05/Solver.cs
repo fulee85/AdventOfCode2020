@@ -15,9 +15,9 @@ namespace AdventOfCode2020.Day05
                 .Select(bp => bp.SeatId)
                 .ToList();
         }
-        public string GetFirstSolution() => boardingPassIds.FirstOrDefault().ToString();
+        public string GetPartOneSolution() => boardingPassIds.FirstOrDefault().ToString();
 
-        public string GetSecondSolution()
+        public string GetPartTwoSolution()
         {
             int mySeat = -1;
             for (int i = 0; i < boardingPassIds.Count - 1 && mySeat == -1; i++)

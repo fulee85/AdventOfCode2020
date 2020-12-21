@@ -28,7 +28,7 @@ ababb".Split(Environment.NewLine));
         public void PartOneTest1()
         {
             ISolver solver = new Solver(testInput1);
-            solver.GetFirstSolution().Should().Be("3");
+            solver.GetPartOneSolution().Should().Be("3");
         }
 
         private readonly List<string> testInput2 = new List<string>(
@@ -48,7 +48,7 @@ aaabbb".Split(Environment.NewLine));
         public void PartOneTest2()
         {
             ISolver solver = new Solver(testInput2);
-            solver.GetFirstSolution().Should().Be("2");
+            solver.GetPartOneSolution().Should().Be("2");
         }
 
         private readonly List<string> testInput3 = new List<string>(
@@ -73,7 +73,7 @@ aaaaa".Split(Environment.NewLine));
         public void PartOneTest3()
         {
             ISolver solver = new Solver(testInput3);
-            solver.GetFirstSolution().Should().Be("9");
+            solver.GetPartOneSolution().Should().Be("9");
         }
 
         private readonly List<string> testInput4 = new List<string>(
@@ -91,7 +91,7 @@ bba".Split(Environment.NewLine));
         public void PartOneTest4()
         {
             ISolver solver = new Solver(testInput4);
-            solver.GetFirstSolution().Should().Be("2");
+            solver.GetPartOneSolution().Should().Be("2");
         }
 
         private readonly List<string> testInputPartTwo = new List<string>(
@@ -146,7 +146,7 @@ aabbbbbaabbbaaaaaabbbbbababaaaaabbaaabba".Split(Environment.NewLine));
         public void PartTwoTest1()
         {
             ISolver solver = new Solver(testInputPartTwo);
-            solver.GetSecondSolution().Should().Be("12");
+            solver.GetPartTwoSolution().Should().Be("12");
         }
     }
 }

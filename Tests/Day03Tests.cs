@@ -24,7 +24,7 @@ namespace Tests
 "#...##....#",
 ".#..#...#.#"
             });
-            solver.GetFirstSolution().Should().Be("7");
+            solver.GetPartOneSolution().Should().Be("7");
         }
 
         [Fact]
@@ -43,7 +43,7 @@ namespace Tests
 "#...##....#",
 ".#..#...#.#"
             });
-            solver.GetSecondSolution().Should().Be("336");
+            solver.GetPartTwoSolution().Should().Be("336");
         }
     }
 }

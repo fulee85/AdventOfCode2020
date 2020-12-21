@@ -12,14 +12,14 @@ namespace Tests
         public void Test1()
         {
             ISolver solver = new Solver(new List<int>{ 1721,979,366,299,675,1456 });
-            solver.GetFirstSolution().Should().Be("514579");
+            solver.GetPartOneSolution().Should().Be("514579");
         }
 
         [Fact]
         public void Test2()
         {
             ISolver solver = new Solver(new List<int> { 1721, 979, 366, 299, 675, 1456 });
-            solver.GetSecondSolution().Should().Be("241861950");
+            solver.GetPartTwoSolution().Should().Be("241861950");
         }
     }
 }

@@ -16,12 +16,12 @@ namespace AdventOfCode2020.Day04
             this.input = input;
         }
 
-        public string GetFirstSolution()
+        public string GetPartOneSolution()
         {
             return GetValidPassportsCount(() => new Passport()).ToString();
         }
 
-        public string GetSecondSolution()
+        public string GetPartTwoSolution()
         {
             return GetValidPassportsCount(() => new StrictPassport()).ToString();
         }

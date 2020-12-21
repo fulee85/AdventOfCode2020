@@ -125,14 +125,14 @@
         public void PartOneTest1()
         {
             ISolver solver = new Solver(testInput);
-            solver.GetFirstSolution().Should().Be("20899048083289");
+            solver.GetPartOneSolution().Should().Be("20899048083289");
         }
 
         [Fact]
         public void PartTwoTest1()
         {
             ISolver solver = new Solver(testInput);
-            solver.GetSecondSolution().Should().Be("273");
+            solver.GetPartTwoSolution().Should().Be("273");
         }
 
         private readonly List<string> testInput = new List<string>(

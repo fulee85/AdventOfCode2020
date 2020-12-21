@@ -27,7 +27,7 @@ a
 a
 
 b".Split(Environment.NewLine));
-            solver.GetFirstSolution().Should().Be("11");
+            solver.GetPartOneSolution().Should().Be("11");
         }
 
         [Fact]
@@ -49,7 +49,7 @@ a
 a
 
 b".Split(Environment.NewLine));
-            solver.GetSecondSolution().Should().Be("6");
+            solver.GetPartTwoSolution().Should().Be("6");
         }
     }
 }

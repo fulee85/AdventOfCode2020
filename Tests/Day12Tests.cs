@@ -42,14 +42,14 @@
         public void PartOneTest1()
         {
             ISolver solver = new Solver(testInput);
-            solver.GetFirstSolution().Should().Be("25");
+            solver.GetPartOneSolution().Should().Be("25");
         }
 
         [Fact]
         public void PartTwoTest1()
         {
             ISolver solver = new Solver(testInput);
-            solver.GetSecondSolution().Should().Be("286");
+            solver.GetPartTwoSolution().Should().Be("286");
         }
     }
 }

@@ -23,7 +23,7 @@ namespace Tests
                 new Password(1, 3, 'b', "cdefg"),
                 new Password(2, 9, 'c', "ccccccccc"),
             });
-            solver.GetFirstSolution().Should().Be("2");
+            solver.GetPartOneSolution().Should().Be("2");
         }
 
         [Fact]
@@ -34,7 +34,7 @@ namespace Tests
                 new Password(1, 3, 'b', "cdefg"),
                 new Password(2, 9, 'c', "ccccccccc")
             });
-            solver.GetSecondSolution().Should().Be("1");
+            solver.GetPartTwoSolution().Should().Be("1");
         }
     }
 }

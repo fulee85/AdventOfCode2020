@@ -12,14 +12,14 @@
         {
             this.input = input.ToList();
         }
-        public string GetFirstSolution()
+        public string GetPartOneSolution()
         {
             var portComputer = new PartOne.PortComputer();
             input.ForEach(portComputer.ProcessInstruction);
             return portComputer.GetMemorySum().ToString();
         }
 
-        public string GetSecondSolution()
+        public string GetPartTwoSolution()
         {
             var portComputer = new PartTwo.PortComputer();
             input.ForEach(portComputer.ProcessInstruction);

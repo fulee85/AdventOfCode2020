@@ -16,13 +16,13 @@
             wordsInput = input.SkipWhile(s => !string.IsNullOrEmpty(s)).Skip(1).ToList();
         }
 
-        public string GetFirstSolution()
+        public string GetPartOneSolution()
         {
             Grammar grammar = CreateGrammar(rulesInput);
             return wordsInput.Count(w => grammar.GetReachableWordsFrom("0").Contains(w)).ToString();
         }
 
-        public string GetSecondSolution()
+        public string GetPartTwoSolution()
         {
             Grammar grammar = CreateGrammar(rulesInput);
             var reachableWordsFrom0 = grammar.GetReachableWordsFrom("0");

@@ -21,7 +21,7 @@
         public void PartOneTest1()
         {
             ISolver solver = new Solver(testInput1);
-            solver.GetFirstSolution().Should().Be("165");
+            solver.GetPartOneSolution().Should().Be("165");
         }
 
         private readonly List<string> testInput2 = new List<string>
@@ -36,7 +36,7 @@
         public void PartTwoTest1()
         {
             ISolver solver = new Solver(testInput2);
-            solver.GetSecondSolution().Should().Be("208");
+            solver.GetPartTwoSolution().Should().Be("208");
         }
     }
 }

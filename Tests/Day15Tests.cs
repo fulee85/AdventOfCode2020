@@ -18,7 +18,7 @@
         public void PartOneTest1(string input, string expectedResult)
         {
             ISolver solver = new Solver(input);
-            solver.GetFirstSolution().Should().Be(expectedResult);
+            solver.GetPartOneSolution().Should().Be(expectedResult);
         }
 
         [Theory]
@@ -32,7 +32,7 @@
         public void PartTwoTest1(string input, string expectedResult)
         {
             ISolver solver = new Solver(input);
-            solver.GetSecondSolution().Should().Be(expectedResult);
+            solver.GetPartTwoSolution().Should().Be(expectedResult);
         }
     }
 }

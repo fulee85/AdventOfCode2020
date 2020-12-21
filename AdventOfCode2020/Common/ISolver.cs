@@ -8,7 +8,7 @@ namespace AdventOfCode2020.Common
 {
     public interface ISolver
     {
-        string GetFirstSolution();
-        string GetSecondSolution();
+        string GetPartOneSolution();
+        string GetPartTwoSolution();
     }
 }

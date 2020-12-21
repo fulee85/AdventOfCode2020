@@ -13,7 +13,7 @@
         {
             this.input = input;
         }
-        public string GetFirstSolution()
+        public string GetPartOneSolution()
         {
             decimal result = 0M; 
             foreach (var expression in input)
@@ -24,7 +24,7 @@
             return result.ToString();
         }
 
-        public string GetSecondSolution()
+        public string GetPartTwoSolution()
         {
             decimal result = 0M;
             foreach (var expression in input)

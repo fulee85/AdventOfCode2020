@@ -36,7 +36,6 @@
         {
             tiles.ForEach(tl => tl.ForEach(t => t.RemoveEdges()));
             List<string> pictureRows = new List<string>();
-            int row = 0;
             foreach (var tilesList in tiles)
             {
                 for (int r = 0; r < tiles[0][0].RowCount; r++)

@@ -31,7 +31,7 @@ dark olive bags contain 3 faded blue bags, 4 dotted black bags.
 vibrant plum bags contain 5 faded blue bags, 6 dotted black bags.
 faded blue bags contain no other bags.
 dotted black bags contain no other bags.".Split(Environment.NewLine).Select(s => new BagRule(s)));
-            solver.GetFirstSolution().Should().Be("4");
+            solver.GetPartOneSolution().Should().Be("4");
         }
 
         [Fact]
@@ -45,7 +45,7 @@ dark yellow bags contain 2 dark green bags.
 dark green bags contain 2 dark blue bags.
 dark blue bags contain 2 dark violet bags.
 dark violet bags contain no other bags.".Split(Environment.NewLine).Select(s => new BagRule(s)));
-            solver.GetSecondSolution().Should().Be("126");
+            solver.GetPartTwoSolution().Should().Be("126");
         }
     }
 }

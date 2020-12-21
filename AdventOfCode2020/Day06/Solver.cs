@@ -14,12 +14,12 @@ namespace AdventOfCode2020.Day06
             this.input = input.ToList();
         }
 
-        public string GetFirstSolution()
+        public string GetPartOneSolution()
         {
             return GetAnswerCount(pg =>pg.AnyAnswerCount);
         }
 
-        public string GetSecondSolution()
+        public string GetPartTwoSolution()
         {
             return GetAnswerCount(pg => pg.AllAnswerCount);
         }

@@ -15,7 +15,7 @@
             this.input = input;
         }
 
-        public string GetFirstSolution()
+        public string GetPartOneSolution()
         {
             var instructionFactory = new FirstInstructionFactory();
             var ship = new Ship(new DirectionVector(1,0));
@@ -26,7 +26,7 @@
             return ship.GetManhattanDistance().ToString();
         }
 
-        public string GetSecondSolution()
+        public string GetPartTwoSolution()
         {
             var instructionFactory = new SecondInstructionsFactory();
             var ship = new Ship(new DirectionVector(10, 1));

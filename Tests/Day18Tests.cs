@@ -21,14 +21,14 @@
         public void PartOneTest1()
         {
             ISolver solver = new Solver(testInput);
-            solver.GetFirstSolution().Should().Be((26 + 437 + 12240 + 13632).ToString());
+            solver.GetPartOneSolution().Should().Be((26 + 437 + 12240 + 13632).ToString());
         }
 
         [Fact]
         public void PartTwoTest1()
         {
             ISolver solver = new Solver(testInput);
-            solver.GetSecondSolution().Should().Be((693891).ToString());
+            solver.GetPartTwoSolution().Should().Be((693891).ToString());
         }
     }
 }

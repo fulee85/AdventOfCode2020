@@ -14,7 +14,7 @@
             this.joltages = input.ToList();
             joltages.Sort();
         }
-        public string GetFirstSolution()
+        public string GetPartOneSolution()
         {
             var differenceCounter = new DifferenceCounter(joltages.First());
             for (int i = 0; i < joltages.Count - 1; i++)
@@ -25,7 +25,7 @@
             return differenceCounter.Result.ToString();
         }
 
-        public string GetSecondSolution()
+        public string GetPartTwoSolution()
         {
             var routesCounter = joltages.Select(e => new ListElement(e)).ToArray();
             routesCounter.Last().PossibleRoutesFromHere = 1;

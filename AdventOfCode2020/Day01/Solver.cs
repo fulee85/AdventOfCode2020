@@ -19,7 +19,7 @@ namespace AdventOfCode2020.Day01
             this.numbers = input.ToHashSet();
         }
 
-        public string GetFirstSolution()
+        public string GetPartOneSolution()
         {
             int goal = 2020;
             foreach (var item in numbers)
@@ -32,7 +32,7 @@ namespace AdventOfCode2020.Day01
             return "No solution!";
         }
 
-        public string GetSecondSolution()
+        public string GetPartTwoSolution()
         {
             int goal = 2020;
             foreach (var item1 in numbers)

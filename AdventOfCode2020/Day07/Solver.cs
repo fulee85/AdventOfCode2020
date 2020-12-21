@@ -15,7 +15,7 @@ namespace AdventOfCode2020.Day07
 
         private readonly Dictionary<string, List<string>> bagsGraph = new Dictionary<string, List<string>>();
 
-        public string GetFirstSolution()
+        public string GetPartOneSolution()
         {
             foreach (var rule in bagRules)
             {
@@ -51,7 +51,7 @@ namespace AdventOfCode2020.Day07
             return bagsContainAtLeastOneShinyGoldBag.Count.ToString();
         }
 
-        public string GetSecondSolution()
+        public string GetPartTwoSolution()
         {
             decimal bagsInShinyGoldCount = 0;
             Queue<Bag> bagsInSinyGold = new Queue<Bag>();

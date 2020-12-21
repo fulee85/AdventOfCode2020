@@ -15,35 +15,35 @@
         public void PartOneTest1()
         {
             ISolver solver = new Solver(testInput1);
-            solver.GetFirstSolution().Should().Be("35");
+            solver.GetPartOneSolution().Should().Be("35");
         }
 
         [Fact]
         public void PartOneTest2()
         {
             ISolver solver = new Solver(testInput2);
-            solver.GetFirstSolution().Should().Be("220");
+            solver.GetPartOneSolution().Should().Be("220");
         }
 
         [Fact]
         public void PartTwoTest0()
         {
             ISolver solver = new Solver(new[] { 1,4,5,6,7});
-            solver.GetSecondSolution().Should().Be("4");
+            solver.GetPartTwoSolution().Should().Be("4");
         }
 
         [Fact]
         public void PartTwoTest1()
         {
             ISolver solver = new Solver(testInput1);
-            solver.GetSecondSolution().Should().Be("8");
+            solver.GetPartTwoSolution().Should().Be("8");
         }
 
         [Fact]
         public void PartTwoTest2()
         {
             ISolver solver = new Solver(testInput2);
-            solver.GetSecondSolution().Should().Be("19208");
+            solver.GetPartTwoSolution().Should().Be("19208");
         }
     }
 }

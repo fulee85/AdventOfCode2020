@@ -29,12 +29,12 @@
             }
         }
 
-        public string GetFirstSolution()
+        public string GetPartOneSolution()
         {
             return GetActiveCubeCount(space2D);
         }
 
-        public string GetSecondSolution()
+        public string GetPartTwoSolution()
         {
             return GetActiveCubeCount(space3D);
         }

@@ -27,7 +27,7 @@ nearby tickets:
         public void PartOneTest1()
         {
             ISolver solver = new Solver(testInput1);
-            solver.GetFirstSolution().Should().Be("71");
+            solver.GetPartOneSolution().Should().Be("71");
         }
 
         private readonly List<string> testInput2 = new List<string>(
@@ -47,7 +47,7 @@ nearby tickets:
         public void PartTwoTest1()
         {
             ISolver solver = new Solver(testInput2);
-            solver.GetSecondSolution().Should().Be((11*12).ToString());
+            solver.GetPartTwoSolution().Should().Be((11*12).ToString());
         }
     }
 }

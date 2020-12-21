@@ -13,8 +13,8 @@ namespace AdventOfCode2020.Day02
             this.input = input;
         }
 
-        public string GetFirstSolution() => input.Count(prop => prop.IsValidSledRental).ToString();
+        public string GetPartOneSolution() => input.Count(prop => prop.IsValidSledRental).ToString();
 
-        public string GetSecondSolution() => input.Count(prop => prop.IsValidAtToboggan).ToString();
+        public string GetPartTwoSolution() => input.Count(prop => prop.IsValidAtToboggan).ToString();
     }
 }
