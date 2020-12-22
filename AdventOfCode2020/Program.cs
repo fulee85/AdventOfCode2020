@@ -9,7 +9,7 @@ namespace AdventOfCode2020
         static void Main(string[] args)
         {
             Stopwatch stopwatch = new Stopwatch();
-            ISolver solver = SolverFactory.GetSolver(21);
+            ISolver solver = SolverFactory.GetSolver(22);
 
             stopwatch.Start();
             var partOneSolution = solver.GetPartOneSolution();
