@@ -51,31 +51,6 @@ aaabbb".Split(Environment.NewLine));
             solver.GetPartOneSolution().Should().Be("2");
         }
 
-        private readonly List<string> testInput3 = new List<string>(
-@"0: 8 11
-8: 42
-11: 42 2
-42: 120 16 | 2 2
-120: ""b""
-16: 2 120 | 120 2
-2: ""a""
-
-babbaba
-babbbaa 
-babaaa 
-bbababa  
-bbabbaa 
-bbaaaa
-aababa
-aabbaa 
-aaaaa".Split(Environment.NewLine));
-        [Fact]
-        public void PartOneTest3()
-        {
-            ISolver solver = new Solver(testInput3);
-            solver.GetPartOneSolution().Should().Be("9");
-        }
-
         private readonly List<string> testInput4 = new List<string>(
 @"0: 1 2
 1: ""a""
