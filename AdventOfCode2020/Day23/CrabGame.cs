@@ -1,6 +1,5 @@
 ﻿namespace AdventOfCode2020.Day23
 {
-    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
@@ -24,12 +23,10 @@
             {
                 var newCup = new Cup(cupsNumber);
                 cupsList[newCup.CupNo] = newCup;
-                newCup.PreviousCup = previousCup;
                 previousCup.NextCup = newCup;
                 previousCup = newCup;
             }
             previousCup.NextCup = startCup;
-            startCup.PreviousCup = previousCup;
             actualCup = startCup;
         }
 
@@ -62,7 +59,6 @@
             var nextCup3 = nextCup2.NextCup;
 
             actualCup.NextCup = nextCup3.NextCup;
-            actualCup.NextCup.PreviousCup = actualCup;
 
             // Find destination cup: actual minus one value
             var searchedCupNo = actualCup.CupNo - 1;
@@ -83,9 +79,7 @@
             var destinationCup = cupsList[searchedCupNo];
             var destinationOriginalNextCup = destinationCup.NextCup;
             destinationCup.NextCup = nextCup1;
-            nextCup1.PreviousCup = destinationCup;
             nextCup3.NextCup = destinationOriginalNextCup;
-            destinationOriginalNextCup.PreviousCup = nextCup3;
 
             // Step actual cup one
             actualCup = actualCup.NextCup;

@@ -32,6 +32,7 @@ namespace AdventOfCode2020
             21 => new Day21.Solver(new Input<Food>("21", s => new Food(s))),
             22 => new Day22.Solver(new Input<string>("22", s => s)),
             23 => new Day23.Solver("158937462"),
+            24 => new Day24.Solver(new Input<Day24.Instruction>("24", s => new Day24.Instruction(s))),
             _ => throw new Exception()
         };
     }

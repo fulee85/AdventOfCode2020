@@ -11,8 +11,8 @@
 
         public Solver(List<string> input)
         {
-            space2D = new Space2D();
-            space3D = new Space3D();
+            space2D = new Space3D();
+            space3D = new Space4D();
             int i = 0;
             for (int x = -input.Count / 2; x <= input.Count / 2 && i < input.Count; x++)
             {
