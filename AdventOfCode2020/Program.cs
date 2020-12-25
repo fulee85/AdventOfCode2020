@@ -8,7 +8,7 @@ namespace AdventOfCode2020
     {
         static void Main(string[] args)
         {
-            var dayNumber = 24;
+            var dayNumber = 25;
 
             Stopwatch stopwatch = new Stopwatch();
             ISolver solver = SolverFactory.GetSolver(dayNumber);
