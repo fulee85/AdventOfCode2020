@@ -1,17 +1,16 @@
 ﻿namespace AdventOfCode2020.Day23
 {
     using AdventOfCode2020.Common;
-    using System;
     using System.Collections.Generic;
     using System.Linq;
 
     public class Solver : ISolver
     {
-        private List<int> cups = new List<int>();
+        private readonly List<int> cups;
 
-        public Solver(string input)
+        public Solver(IEnumerable<string> input)
         {
-            cups = input.Select(c => int.Parse(c.ToString())).ToList();
+            cups = input.First().Select(c => int.Parse(c.ToString())).ToList();
         }
         public string GetPartOneSolution()
         {
